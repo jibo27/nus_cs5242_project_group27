@@ -17,6 +17,7 @@ python train.py --epochs 3001 --batch_size 300 --model S2VTAttModel --dim_vid 20
 ```
 
 3. test
+Please download the pre-trained checkpoint model [here](https://drive.google.com/file/d/1vq7DFH_HiHuPkb6H6mpzFzKLNkh4OUzM/view?usp=sharing).
 ```bash
 python eval.py --epochs 3001 --batch_size 300 --model S2VTAttModel --dim_vid 2048 --rnn_type lstm --test_feats_dir mydata/test_feats/senet154 --dim_hidden 1024 --ckpt_path results/75014/model_3000.pth
 ```

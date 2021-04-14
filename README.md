@@ -25,7 +25,7 @@ python prepro_feats.py --output_dir mydata/test_feats/senet154 --model senet154 
 
 2. Training a model
 
-Before running the following scripts, please set the `feats_dir` and `test_feats_dir` correctly.
+Before running the following scripts, please set the `feats_dir`, `test_feats_dir`, `caption_json`, `object1_object2_json` and `relationship_json` correctly.
 ```bash
 
 python train.py --epochs 3001 --batch_size 300 --model S2VTAttModel --dim_vid 2048 --rnn_type lstm --dim_hidden 1024 \
@@ -39,8 +39,7 @@ The output result is saved in `results/<current datetime>`.
 
 3. test
 
-Before running the following scripts, please set the `feats_dir`, `test_feats_dir` and `ckpt_path` correctly.
-
+Before running the following scripts, please set the `test_feats_dir`, `caption_json`, `object1_object2_json`, `relationship_json` and `ckpt_path` correctly.
 
 If you want to use the model with 0.75014 score, please download the pre-trained checkpoint model [here](https://drive.google.com/file/d/1vq7DFH_HiHuPkb6H6mpzFzKLNkh4OUzM/view?usp=sharing).
 ```bash

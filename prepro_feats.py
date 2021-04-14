@@ -49,6 +49,7 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
     params = vars(args)
+    os.makedirs(params["output_dir"], exist_ok=True)
     if params['model'] == 'inception_v3':
         C, H, W = 3, 299, 299
         model = pretrainedmodels.inceptionv3(pretrained='imagenet')

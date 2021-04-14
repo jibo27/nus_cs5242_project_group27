@@ -16,8 +16,10 @@ from torch.utils.data import DataLoader
 
 
 def test(model, crit, opt, testloader):
-    object2idx = json.load(open('mydata/object1_object2.json', 'r'))
-    relationship2idx = json.load(open('mydata/relationship.json', 'r'))
+    #object2idx = json.load(open('mydata/object1_object2.json', 'r'))
+    #relationship2idx = json.load(open('mydata/relationship.json', 'r'))
+    object2idx = json.load(open(opt['object1_object2_json']))
+    relationship2idx = json.load(open(opt['relationship_json']))
     idx2object = {idx:obj for obj, idx in object2idx.items()}
     idx2relationship = {idx:rel for rel, idx in relationship2idx.items()}
 

@@ -5,15 +5,13 @@ def parse_opt():
     parser = argparse.ArgumentParser()
     # Data input settings
     parser.add_argument(
-        '--input_json',
+        '--object1_object2_json',
         type=str,
-        default='data/videodatainfo_2017.json',
-        help='path to the json file containing video info')
+        default='mydata/object1_object2.json')
     parser.add_argument(
-        '--info_json',
+        '--relationship_json',
         type=str,
-        default='data/info.json',
-        help='path to the json file containing additional info and vocab')
+        default='mydata/relationship.json')
     parser.add_argument(
         '--caption_json',
         type=str,
